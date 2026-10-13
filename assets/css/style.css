@@ -205,7 +205,7 @@ a.card:hover { transform: translateY(-3px); }
 a.sector:hover { filter: brightness(1.08); color: #fff; }
 
 /* Brand partner logos */
-.partners { display: grid; grid-template-columns: repeat(2, 1fr); max-width: 860px; margin: 0 auto; gap: 0; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.partners { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
 .partners .pt { padding: 28px 22px; text-align: center; border-right: 1px solid var(--line); }
 .partners .pt:last-child { border-right: 0; }
 .partners img { height: 64px; width: auto; margin: 0 auto 12px; object-fit: contain; }
