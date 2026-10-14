@@ -396,7 +396,7 @@ a.sector:hover { filter: brightness(1.08); color: #fff; }
   .range { grid-template-columns: 1fr; }
   .range-items { border-right: 0; }
   .range-items ul, .check-list.cols { columns: 1; }
-  .mobile-actions { display: grid; grid-template-columns: repeat(4, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--navy-deep); border-top: 3px solid var(--red); }
+  .mobile-actions { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--navy-deep); border-top: 3px solid var(--red); }
   .mobile-actions a { color: #fff; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 4px; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
   .mobile-actions a + a { border-left: 1px solid rgba(255,255,255,.15); }
   .mobile-actions a.primary { background: var(--red); }
