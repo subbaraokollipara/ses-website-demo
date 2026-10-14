@@ -310,6 +310,16 @@ a.sector:hover { filter: brightness(1.08); color: #fff; }
 .footer-bottom { border-top: 1px solid rgba(255,255,255,.12); padding: 18px 20px; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: .9rem; }
 .footer-bottom .motto { font-family: var(--head); letter-spacing: .2em; text-transform: uppercase; color: #fff; }
 
+/* WhatsApp */
+:root { --wa: #25D366; --wa-dark: #128C4A; }
+.btn-wa { background: var(--wa-dark); color: #fff !important; }
+.btn-wa:hover { background: #0E6F3A; }
+.wa-float { position: fixed; right: 20px; bottom: calc(20px + env(safe-area-inset-bottom, 0px)); z-index: 45; display: inline-flex; align-items: center; gap: 10px; background: var(--wa); color: #fff; text-decoration: none; font-family: var(--head); text-transform: uppercase; letter-spacing: .04em; font-size: 1rem; padding: 12px 20px 12px 14px; border-radius: 999px; box-shadow: 0 8px 24px rgba(0,0,0,.22); transition: transform .2s, background .2s; }
+.wa-float svg { width: 28px; height: 28px; }
+.wa-float:hover, .wa-float:focus-visible { background: var(--wa-dark); color: #fff; transform: translateY(-2px); }
+.footer-contact li > svg[fill="currentColor"] { color: var(--wa); }
+.mobile-actions a.wa { background: var(--wa-dark); }
+
 /* Mobile action bar */
 .mobile-actions { display: none; }
 
@@ -383,10 +393,11 @@ a.sector:hover { filter: brightness(1.08); color: #fff; }
   .range { grid-template-columns: 1fr; }
   .range-items { border-right: 0; }
   .range-items ul, .check-list.cols { columns: 1; }
-  .mobile-actions { display: grid; grid-template-columns: repeat(3, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--navy-deep); border-top: 3px solid var(--red); }
+  .mobile-actions { display: grid; grid-template-columns: repeat(4, 1fr); position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; background: var(--navy-deep); border-top: 3px solid var(--red); }
   .mobile-actions a { color: #fff; text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 4px; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
   .mobile-actions a + a { border-left: 1px solid rgba(255,255,255,.15); }
   .mobile-actions a.primary { background: var(--red); }
+  .wa-float { display: none; }
   .mobile-actions svg { width: 22px; height: 22px; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; scroll-behavior: auto !important; } }

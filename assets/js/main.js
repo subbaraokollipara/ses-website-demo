@@ -15,6 +15,7 @@
     var href = a.getAttribute("href");
     if (href.indexOf("tel:") === 0) track("phone_click", { phone: href.slice(4) });
     else if (href.indexOf("mailto:") === 0) track("email_click", { email: href.slice(7) });
+    else if (href.indexOf("https://wa.me/") === 0) track("whatsapp_click", { page: location.pathname });
     else if (/google\.[a-z.]+\/maps/.test(href)) track("map_click", { location: a.dataset.loc || "" });
     else if (a.dataset.cta) track("cta_click", { cta: a.dataset.cta });
   });
